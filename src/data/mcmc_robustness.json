@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "vessel_count": 22,
+    "essential_count": 22,
+    "stable_count": 0,
+    "variable_count": 0
+  },
+  "vessels": [
+    {
+      "vessel_id": 10023760,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10031680,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10087110,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10110870,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10134620,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10142540,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10150460,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10174220,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10190060,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10237570,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10245490,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10332600,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10340520,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10403870,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10427630,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10451380,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10459300,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10554330,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10578090,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10641440,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10673120,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10776060,
+      "appearance_frequency": 1.0,
+      "category": "essential"
+    }
+  ]
+}

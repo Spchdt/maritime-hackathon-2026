@@ -1,0 +1,16 @@
+Header Name,Data Type,Units,Submission
+team_name,String,-,Kopibara
+category,String,-,A
+report_file_name,String,-,MaritimeHackathon2026_CasePaper_Kopibara.pdf
+sum_of_fleet_deadweight,Float,tonnes,4578016
+total_cost_of_fleet,Float,dollars,20039187.25
+average_fleet_safety_score,Float,-,3.14
+no_of_unique_main_engine_fuel_types_in_fleet,Integer,-,8
+sensitivity_analysis_performance,String,Yes/No,Yes
+size_of_fleet_count,Integer,-,22
+total_emission_CO2_eq,Float,tonnes,13364.5
+total_fuel_consumption,Float,tonnes,4674.48
+,,,
+,,,
+Notes: ,,,
+"For report_file_name, please include file extensions.",,,

@@ -1,0 +1,76 @@
+{
+  "fuel_types": [
+    {
+      "fuel_type": "Ammonia",
+      "vessel_count": 8,
+      "total_dwt": 1483752,
+      "total_fuel": 3350.25,
+      "total_co2eq": 1136.91,
+      "total_cost": 9734290.25,
+      "avg_safety_score": 3.5
+    },
+    {
+      "fuel_type": "DISTILLATE FUEL",
+      "vessel_count": 54,
+      "total_dwt": 7399678,
+      "total_fuel": 16634.71,
+      "total_co2eq": 55116.46,
+      "total_cost": 45088629.28,
+      "avg_safety_score": 2.56
+    },
+    {
+      "fuel_type": "Ethanol",
+      "vessel_count": 5,
+      "total_dwt": 922748,
+      "total_fuel": 2536.83,
+      "total_co2eq": 5399.49,
+      "total_cost": 7747678.87,
+      "avg_safety_score": 3.4
+    },
+    {
+      "fuel_type": "Hydrogen",
+      "vessel_count": 2,
+      "total_dwt": 293401,
+      "total_fuel": 197.39,
+      "total_co2eq": 237.42,
+      "total_cost": 2171979.66,
+      "avg_safety_score": 3.5
+    },
+    {
+      "fuel_type": "LNG",
+      "vessel_count": 22,
+      "total_dwt": 3024480,
+      "total_fuel": 3953.22,
+      "total_co2eq": 11607.22,
+      "total_cost": 20426759.24,
+      "avg_safety_score": 3.77
+    },
+    {
+      "fuel_type": "LPG (Butane)",
+      "vessel_count": 3,
+      "total_dwt": 442239,
+      "total_fuel": 650.63,
+      "total_co2eq": 2040.05,
+      "total_cost": 2831254.08,
+      "avg_safety_score": 4.0
+    },
+    {
+      "fuel_type": "LPG (Propane)",
+      "vessel_count": 3,
+      "total_dwt": 451804,
+      "total_fuel": 559.26,
+      "total_co2eq": 1726.0,
+      "total_cost": 2465456.21,
+      "avg_safety_score": 4.67
+    },
+    {
+      "fuel_type": "Methanol",
+      "vessel_count": 11,
+      "total_dwt": 1281230,
+      "total_fuel": 3268.07,
+      "total_co2eq": 5264.58,
+      "total_cost": 11624158.22,
+      "avg_safety_score": 3.64
+    }
+  ]
+}

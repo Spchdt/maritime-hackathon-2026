@@ -1,0 +1,143 @@
+{
+  "summary": {
+    "total_shapley_value": 184141224.38,
+    "vessel_count": 22,
+    "essential_count": 11,
+    "useful_count": 11,
+    "marginal_count": 0
+  },
+  "vessels": [
+    {
+      "vessel_id": 10087110,
+      "shapley_value": 10496049.79,
+      "rank": 1,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10150460,
+      "shapley_value": 10496049.79,
+      "rank": 2,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10134620,
+      "shapley_value": 10127767.34,
+      "rank": 3,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10174220,
+      "shapley_value": 9575343.67,
+      "rank": 4,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10673120,
+      "shapley_value": 9575343.67,
+      "rank": 5,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10237570,
+      "shapley_value": 9207061.22,
+      "rank": 6,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10023760,
+      "shapley_value": 9022919.99,
+      "rank": 7,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10142540,
+      "shapley_value": 9022919.99,
+      "rank": 8,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10332600,
+      "shapley_value": 9022919.99,
+      "rank": 9,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10190060,
+      "shapley_value": 8470496.32,
+      "rank": 10,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10459300,
+      "shapley_value": 8470496.32,
+      "rank": 11,
+      "category": "essential"
+    },
+    {
+      "vessel_id": 10578090,
+      "shapley_value": 8286355.1,
+      "rank": 12,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10031680,
+      "shapley_value": 8102213.87,
+      "rank": 13,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10340520,
+      "shapley_value": 7918072.65,
+      "rank": 14,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10776060,
+      "shapley_value": 7918072.65,
+      "rank": 15,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10427630,
+      "shapley_value": 7549790.2,
+      "rank": 16,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10110870,
+      "shapley_value": 7181507.75,
+      "rank": 17,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10245490,
+      "shapley_value": 6997366.53,
+      "rank": 18,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10403870,
+      "shapley_value": 6997366.53,
+      "rank": 19,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10641440,
+      "shapley_value": 6997366.53,
+      "rank": 20,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10554330,
+      "shapley_value": 6444942.85,
+      "rank": 21,
+      "category": "useful"
+    },
+    {
+      "vessel_id": 10451380,
+      "shapley_value": 6260801.63,
+      "rank": 22,
+      "category": "useful"
+    }
+  ]
+}

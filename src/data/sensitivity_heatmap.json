@@ -1,0 +1,132 @@
+{
+    "summary": {
+        "total_cells": 16,
+        "feasible_cells": 16,
+        "carbon_prices": [
+            40,
+            80,
+            120,
+            160
+        ],
+        "safety_thresholds": [
+            3.0,
+            3.5,
+            4.0,
+            4.5
+        ]
+    },
+    "cells": [
+        {
+            "carbon_price": 40,
+            "safety_threshold": 3.0,
+            "total_cost": 19488976.698404428,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 40,
+            "safety_threshold": 3.5,
+            "total_cost": 19634915.062285714,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 40,
+            "safety_threshold": 4.0,
+            "total_cost": 20560533.79325023,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 40,
+            "safety_threshold": 4.5,
+            "total_cost": 23024118.93361326,
+            "fleet_size": 26,
+            "feasible": true
+        },
+        {
+            "carbon_price": 80,
+            "safety_threshold": 3.0,
+            "total_cost": 20039187.249016695,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 80,
+            "safety_threshold": 3.5,
+            "total_cost": 20195801.748621386,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 80,
+            "safety_threshold": 4.0,
+            "total_cost": 21066026.846352756,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 80,
+            "safety_threshold": 4.5,
+            "total_cost": 23559478.322082877,
+            "fleet_size": 26,
+            "feasible": true
+        },
+        {
+            "carbon_price": 120,
+            "safety_threshold": 3.0,
+            "total_cost": 20582400.76462063,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 120,
+            "safety_threshold": 3.5,
+            "total_cost": 20727473.731224664,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 120,
+            "safety_threshold": 4.0,
+            "total_cost": 21569744.5750311,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 120,
+            "safety_threshold": 4.5,
+            "total_cost": 24090426.101516906,
+            "fleet_size": 26,
+            "feasible": true
+        },
+        {
+            "carbon_price": 160,
+            "safety_threshold": 3.0,
+            "total_cost": 21125488.13544917,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 160,
+            "safety_threshold": 3.5,
+            "total_cost": 21247687.609832443,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 160,
+            "safety_threshold": 4.0,
+            "total_cost": 22066553.04794099,
+            "fleet_size": 22,
+            "feasible": true
+        },
+        {
+            "carbon_price": 160,
+            "safety_threshold": 4.5,
+            "total_cost": 24619925.8255329,
+            "fleet_size": 26,
+            "feasible": true
+        }
+    ]
+}
