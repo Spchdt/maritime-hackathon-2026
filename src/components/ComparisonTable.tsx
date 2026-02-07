@@ -31,7 +31,7 @@ export function ComparisonTable() {
         <Card elevation={2}>
             <CardHeader title="Scenario Comparison" subheader="Baseline (Safety 3.0) vs Sensitivity (Safety 4.0)" titleTypographyProps={{ variant: 'h6', fontWeight: 'bold' }} />
             <CardContent>
-                <TableContainer>
+                <TableContainer sx={{ overflowX: 'auto' }}>
                     <Table size="small" aria-label="comparison table">
                         <TableHead>
                             <TableRow>

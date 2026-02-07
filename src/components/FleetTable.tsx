@@ -80,7 +80,7 @@ export function FleetTable() {
             subheaderTypographyProps={{ color: '#004d40' }}
         />
         <CardContent sx={{ p: 0, '&:last-child': { pb: 0 } }}>
-            <TableContainer component={Paper} elevation={0} sx={{ borderTopLeftRadius: 16, borderTopRightRadius: 16 }}>
+            <TableContainer component={Paper} elevation={0} sx={{ borderTopLeftRadius: 16, borderTopRightRadius: 16, overflowX: 'auto' }}>
             <Table size="medium" aria-label="fleet table">
                 <TableHead>
                 <TableRow>

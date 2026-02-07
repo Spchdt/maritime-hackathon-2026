@@ -146,9 +146,9 @@ export function HeatmapChart() {
     return (
         <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardHeader title="Sensitivity Analysis" titleTypographyProps={{ variant: 'h6', fontWeight: 'bold' }} />
-            <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 300 }}>
-                    <div style={{ flexGrow: 1, display: 'grid', gap: '8px', gridTemplateColumns: `auto repeat(${carbonPrices.length}, 1fr)`, gridTemplateRows: `auto repeat(${safetyThresholds.length}, 1fr)` }}>
+            <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', p: 0 }}>
+                <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 300, overflowX: 'auto' }}>
+                    <div style={{ flexGrow: 1, display: 'grid', gap: '8px', gridTemplateColumns: `auto repeat(${carbonPrices.length}, 1fr)`, gridTemplateRows: `auto repeat(${safetyThresholds.length}, 1fr)`, minWidth: 600, padding: '16px' }}>
                         {/* Header Row */}
                         <div style={{ fontSize: '12px', fontWeight: 600, color: '#757575', textAlign: 'right', paddingRight: '8px', alignSelf: 'center' }}>Safety \ Carbon</div>
                         {carbonPrices.map(price => (
