@@ -8,9 +8,7 @@ import Typography from '@mui/material/Typography';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import Stack from '@mui/material/Stack';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
@@ -118,18 +116,12 @@ export function Layout({ children }: LayoutProps) {
         }}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            FleetOpt
-          </Typography>
+          <Stack direction="row" alignItems="center" spacing={1}>
+             <DirectionsBoatIcon sx={{ color: 'primary.main' }} />
+             <Typography variant="h6" noWrap component="div" sx={{ color: 'text.primary', fontWeight: 'bold' }}>
+                kopi-marihack26
+             </Typography>
+          </Stack>
         </Toolbar>
       </AppBar>
 
@@ -181,7 +173,16 @@ export function Layout({ children }: LayoutProps) {
         <Toolbar sx={{ display: { sm: 'none' } }} /> 
         
         <Box sx={{ maxWidth: 1200, mx: 'auto' }}>
-            {children}
+            {activeItem === 'Dashboard' ? children : (
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '60vh' }}>
+                    <Typography variant="h4" color="text.secondary" fontWeight="bold">
+                        Coming Soon
+                    </Typography>
+                    <Typography color="text.secondary" sx={{ mt: 1 }}>
+                        The {activeItem} module is under development.
+                    </Typography>
+                </Box>
+            )}
         </Box>
       </Box>
     </Box>
