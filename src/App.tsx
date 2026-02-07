@@ -13,6 +13,7 @@ import routeInfo from './data/route_info.json';
 import { FleetTable } from './components/FleetTable';
 import { ParetoChart, FuelCompositionChart, ShapleyChart, HeatmapChart, CarbonSensitivityChart } from './components/Charts';
 import { ComparisonTable } from './components/ComparisonTable';
+import { MethodologyVisuals } from './components/MethodologyVisuals';
 
 function App() {
   const { optimal_fleet } = fleetResult;
@@ -123,6 +124,9 @@ function App() {
                  <FleetTable />
              </Grid>
         </Grid>
+
+        {/* Methodology Visuals */}
+        <MethodologyVisuals />
 
       </Box>
     </Layout>
