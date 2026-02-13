@@ -30,9 +30,7 @@ export function Layout({ children }: LayoutProps) {
   };
 
   const navItems = [
-      { text: 'Dashboard', icon: <DashboardIcon /> },
-      { text: 'Fleet', icon: <DirectionsBoatIcon /> },
-      { text: 'Analysis', icon: <AnalyticsIcon /> },
+      { text: 'Dashboard', icon: <DashboardIcon /> }
   ];
 
   const drawer = (
@@ -168,11 +166,21 @@ export function Layout({ children }: LayoutProps) {
       {/* Main Content */}
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: { xs: 2, sm: 3 }, width: { sm: `calc(100% - ${drawerWidth}px)` }, minHeight: '100vh', bgcolor: 'background.default', maxWidth: '100vw', overflowX: 'hidden' }}
+        sx={{ 
+            flexGrow: 1, 
+            p: { xs: 2, sm: 3 }, 
+            width: { sm: `calc(100% - ${drawerWidth}px)` }, 
+            minHeight: '100vh', 
+            bgcolor: 'background.default', 
+            maxWidth: '100vw', 
+            overflowX: 'hidden',
+            display: 'flex',
+            flexDirection: 'column'
+        }}
       >
         <Toolbar sx={{ display: { sm: 'none' } }} /> 
         
-        <Box sx={{ maxWidth: 1200, mx: 'auto' }}>
+        <Box sx={{ maxWidth: 1200, mx: 'auto', flexGrow: 1, width: '100%' }}>
             {activeItem === 'Dashboard' ? children : (
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '60vh' }}>
                     <Typography variant="h4" color="text.secondary" fontWeight="bold">
@@ -183,6 +191,19 @@ export function Layout({ children }: LayoutProps) {
                     </Typography>
                 </Box>
             )}
+        </Box>
+
+        {/* Disclaimer Footer */}
+        <Box sx={{ 
+            mt: 4, 
+            py: 2, 
+            borderTop: '1px solid', 
+            borderColor: 'divider',
+            textAlign: 'center'
+        }}>
+            <Typography variant="caption" color="text.secondary">
+                Data presented is mock data for display purposes.
+            </Typography>
         </Box>
       </Box>
     </Box>

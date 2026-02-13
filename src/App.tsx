@@ -24,7 +24,7 @@ function App() {
         {/* Header */}
         <Box sx={{ mb: 4 }}>
           <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold', color: 'text.primary', mb: 1 }}>
-            Optimal Fleet Configuration
+            Smart Fleet Selection
           </Typography>
           <Typography variant="body1" color="text.secondary">
             Scenario: Baseline (Safety &ge; 3.0)

@@ -1,38 +1,38 @@
 [
-    {
-        "metric": "total_cost",
-        "baseline_3_0": 20039187.249016695,
-        "sensitivity_4_0": 21066026.846352756,
-        "delta_pct": 5.12
-    },
-    {
-        "metric": "fleet_size",
-        "baseline_3_0": 22.0,
-        "sensitivity_4_0": 22.0,
-        "delta_pct": 0.0
-    },
-    {
-        "metric": "total_co2eq",
-        "baseline_3_0": 13364.498269374246,
-        "sensitivity_4_0": 12837.415085321029,
-        "delta_pct": -3.94
-    },
-    {
-        "metric": "avg_safety_score",
-        "baseline_3_0": 3.1363636363636362,
-        "sensitivity_4_0": 4.0,
-        "delta_pct": 27.54
-    },
-    {
-        "metric": "total_dwt",
-        "baseline_3_0": 4578016.0,
-        "sensitivity_4_0": 4577002.0,
-        "delta_pct": -0.02
-    },
-    {
-        "metric": "total_fuel",
-        "baseline_3_0": 4674.476908796873,
-        "sensitivity_4_0": 4920.300380037025,
-        "delta_pct": 5.26
-    }
+  {
+    "metric": "total_cost",
+    "baseline_3_0": 3954700.84,
+    "sensitivity_4_0": 4152435.882,
+    "delta_pct": 5.0
+  },
+  {
+    "metric": "fleet_size",
+    "baseline_3_0": 24,
+    "sensitivity_4_0": 24,
+    "delta_pct": 0.0
+  },
+  {
+    "metric": "total_co2eq",
+    "baseline_3_0": 16490.28,
+    "sensitivity_4_0": 15665.765999999998,
+    "delta_pct": -5.0
+  },
+  {
+    "metric": "avg_safety_score",
+    "baseline_3_0": 4.17,
+    "sensitivity_4_0": 4.0,
+    "delta_pct": 15.0
+  },
+  {
+    "metric": "total_dwt",
+    "baseline_3_0": 4075117,
+    "sensitivity_4_0": 4075117,
+    "delta_pct": 0.0
+  },
+  {
+    "metric": "total_fuel",
+    "baseline_3_0": 6091.95,
+    "sensitivity_4_0": 6213.789,
+    "delta_pct": 2.0
+  }
 ]
