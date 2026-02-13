@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, ReferenceArea, Tooltip as RechartsTooltip } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 import { BarChart, Bar, XAxis as BarXAxis, YAxis as BarYAxis, LabelList } from 'recharts';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import LockIcon from '@mui/icons-material/Lock';
@@ -16,7 +16,7 @@ import mcmcData from '../data/mcmc_robustness.json';
 export function MethodologyVisuals() {
   // Process Pareto Data
   const paretoChartData = paretoData
-    .filter((d, i) => i % 2 === 0) // Downsample slightly if needed, or just take all
+    .filter((_, i) => i % 2 === 0) // Downsample slightly if needed, or just take all
     .map(d => ({
       safety: d.safety_threshold,
       cost: Number((d.total_cost / 1000000).toFixed(2)) // Cost in Millions
@@ -50,7 +50,7 @@ export function MethodologyVisuals() {
                   <XAxis dataKey="safety" type="number" domain={['dataMin', 'dataMax']} hide />
                   <YAxis hide domain={['auto', 'auto']} />
                   <RechartsTooltip 
-                    formatter={(value: number) => [`$${value}M`, 'Total Cost']}
+                    formatter={(value: any) => [`$${value}M`, 'Total Cost']}
                     labelFormatter={(label) => `Safety: ${label}`}
                   />
                   <Line type="monotone" dataKey="cost" stroke="#009688" strokeWidth={3} dot={false} />
