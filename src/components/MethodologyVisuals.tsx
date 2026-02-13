@@ -3,13 +3,38 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, ReferenceArea } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, ReferenceArea, Tooltip as RechartsTooltip } from 'recharts';
 import { BarChart, Bar, XAxis as BarXAxis, YAxis as BarYAxis, LabelList } from 'recharts';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 import LockIcon from '@mui/icons-material/Lock';
 import Stack from '@mui/material/Stack';
 
+import paretoData from '../data/pareto_frontier.json';
+import shapleyData from '../data/shapley_values.json';
+import mcmcData from '../data/mcmc_robustness.json';
+
 export function MethodologyVisuals() {
+  // Process Pareto Data
+  const paretoChartData = paretoData
+    .filter((d, i) => i % 2 === 0) // Downsample slightly if needed, or just take all
+    .map(d => ({
+      safety: d.safety_threshold,
+      cost: Number((d.total_cost / 1000000).toFixed(2)) // Cost in Millions
+    }));
+
+  // Process Shapley Data (Top 5)
+  const topShapley = shapleyData.vessels
+    .slice(0, 5)
+    .map(v => ({
+      id: `V${v.vessel_id.toString().slice(-4)}`, // Short ID
+      value: Number((v.shapley_value / 1000000).toFixed(1)) // Value in Millions
+    }));
+
+  // Process MCMC Data
+  const essentialCount = mcmcData.summary.essential_count;
+  const totalCount = mcmcData.summary.vessel_count;
+  const robustnessScore = Math.round((essentialCount / totalCount) * 100);
+
   return (
     <Grid container spacing={4} sx={{ mt: 4 }}>
       {/* Pareto Section */}
@@ -21,17 +46,14 @@ export function MethodologyVisuals() {
             </Typography>
             <Box sx={{ height: 200, width: '100%' }}>
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={[
-                  { safety: 3.0, cost: 20 },
-                  { safety: 4.0, cost: 22 },
-                  { safety: 4.7, cost: 25 },
-                  { safety: 4.8, cost: 18 }, // Drop
-                  { safety: 5.0, cost: 19 },
-                ]} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
-                  <XAxis dataKey="safety" type="number" domain={[3, 5]} hide />
-                  <YAxis hide />
+                <LineChart data={paretoChartData} margin={{ top: 20, right: 30, left: 10, bottom: 0 }}>
+                  <XAxis dataKey="safety" type="number" domain={['dataMin', 'dataMax']} hide />
+                  <YAxis hide domain={['auto', 'auto']} />
+                  <RechartsTooltip 
+                    formatter={(value: number) => [`$${value}M`, 'Total Cost']}
+                    labelFormatter={(label) => `Safety: ${label}`}
+                  />
                   <Line type="monotone" dataKey="cost" stroke="#009688" strokeWidth={3} dot={false} />
-                  <ReferenceArea x1={4.7} x2={4.8} strokeOpacity={0.3} fill="red" fillOpacity={0.1} />
                 </LineChart>
               </ResponsiveContainer>
             </Box>
@@ -39,7 +61,7 @@ export function MethodologyVisuals() {
                 21 optimization runs
             </Typography>
             <Typography variant="caption" color="text.secondary" align="center">
-                Spike at 4.7, Drop at 4.8+
+                Trade-off: Cost vs Safety
             </Typography>
           </CardContent>
         </Card>
@@ -58,13 +80,7 @@ export function MethodologyVisuals() {
             
              <Box sx={{ height: 200, width: '100%', mt: 1 }}>
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart layout="vertical" data={[
-                    { id: 'V001', value: 10.5 },
-                    { id: 'V002', value: 10.5 },
-                    { id: 'V005', value: 10.1 },
-                    { id: 'V008', value: 9.8 },
-                    { id: 'V012', value: 9.2 },
-                ]} margin={{ left: 10 }}>
+                <BarChart layout="vertical" data={topShapley} margin={{ left: 10, right: 30 }}>
                    <BarXAxis type="number" hide />
                    <BarYAxis dataKey="id" type="category" width={40} tick={{ fontSize: 10 }} />
                    <Bar dataKey="value" fill="#3f51b5" radius={[0, 4, 4, 0]}>
@@ -74,7 +90,7 @@ export function MethodologyVisuals() {
               </ResponsiveContainer>
              </Box>
              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                1,000 permutations
+                Top Contributors (Game Theory)
             </Typography>
           </CardContent>
         </Card>
@@ -96,7 +112,7 @@ export function MethodologyVisuals() {
                     justifyContent: 'center',
                     color: '#2e7d32'
                 }}>
-                    <Typography variant="h4" fontWeight="bold">100%</Typography>
+                    <Typography variant="h4" fontWeight="bold">{robustnessScore}%</Typography>
                 </Box>
                  <LockIcon sx={{ position: 'absolute', bottom: 0, right: 10, bgcolor: 'background.paper', borderRadius: '50%', color: '#4caf50', border: '4px solid white' }} />
             </Box>
@@ -105,7 +121,7 @@ export function MethodologyVisuals() {
                 MCMC Robustness
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                10,000 samples
+                {essentialCount} / {totalCount} Essential Vessels
             </Typography>
           </CardContent>
         </Card>

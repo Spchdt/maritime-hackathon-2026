@@ -11,7 +11,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Stack from '@mui/material/Stack';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat';
-import AnalyticsIcon from '@mui/icons-material/Analytics';
 
 import Tooltip from '@mui/material/Tooltip';
 
