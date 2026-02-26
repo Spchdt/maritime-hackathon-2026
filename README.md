@@ -1,4 +1,6 @@
-# Maritime Fleet Optimisation Dashboard
+# Intelligent Fleet Selection
+
+**Live demo:** https://kopi-marihack26.netlify.app/
 
 A React dashboard built for the 2026 Maritime Hackathon. It presents the results of a multi-objective fleet selection optimisation model for the route **Port Hedland → Singapore** (55M tonnes annual demand), with interactive charts covering cost, emissions, safety, and scenario analysis.
 
@@ -64,7 +66,3 @@ generate_mock_data.py  # Mock data generator
 ## Deployment
 
 The project deploys to Netlify automatically on push. Configuration is in `netlify.toml`. The build command is `bun run build` and the publish directory is `dist`.
-
-## Team
-
-**Kopibara** — Maritime Hackathon 2026
