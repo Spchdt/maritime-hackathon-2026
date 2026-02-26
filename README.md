@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/kopi-mari-banner.png" alt="Kopi Mari Banner" width="100%" />
+</p>
+
 # Intelligent Fleet Selection
 
 **Live demo:** https://kopi-marihack26.netlify.app/
